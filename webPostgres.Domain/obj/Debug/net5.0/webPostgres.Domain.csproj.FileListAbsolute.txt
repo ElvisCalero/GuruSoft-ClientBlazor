@@ -1,0 +1,11 @@
+C:\Users\59399\source\repos\ElvisCalero\IntiSoluciones-webPostgres\webPostgres.Domain\bin\Debug\net5.0\webPostgres.Domain.deps.json
+C:\Users\59399\source\repos\ElvisCalero\IntiSoluciones-webPostgres\webPostgres.Domain\bin\Debug\net5.0\webPostgres.Domain.dll
+C:\Users\59399\source\repos\ElvisCalero\IntiSoluciones-webPostgres\webPostgres.Domain\bin\Debug\net5.0\ref\webPostgres.Domain.dll
+C:\Users\59399\source\repos\ElvisCalero\IntiSoluciones-webPostgres\webPostgres.Domain\bin\Debug\net5.0\webPostgres.Domain.pdb
+C:\Users\59399\source\repos\ElvisCalero\IntiSoluciones-webPostgres\webPostgres.Domain\obj\Debug\net5.0\webPostgres.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\59399\source\repos\ElvisCalero\IntiSoluciones-webPostgres\webPostgres.Domain\obj\Debug\net5.0\webPostgres.Domain.AssemblyInfoInputs.cache
+C:\Users\59399\source\repos\ElvisCalero\IntiSoluciones-webPostgres\webPostgres.Domain\obj\Debug\net5.0\webPostgres.Domain.AssemblyInfo.cs
+C:\Users\59399\source\repos\ElvisCalero\IntiSoluciones-webPostgres\webPostgres.Domain\obj\Debug\net5.0\webPostgres.Domain.csproj.CoreCompileInputs.cache
+C:\Users\59399\source\repos\ElvisCalero\IntiSoluciones-webPostgres\webPostgres.Domain\obj\Debug\net5.0\webPostgres.Domain.dll
+C:\Users\59399\source\repos\ElvisCalero\IntiSoluciones-webPostgres\webPostgres.Domain\obj\Debug\net5.0\ref\webPostgres.Domain.dll
+C:\Users\59399\source\repos\ElvisCalero\IntiSoluciones-webPostgres\webPostgres.Domain\obj\Debug\net5.0\webPostgres.Domain.pdb

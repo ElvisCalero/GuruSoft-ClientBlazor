@@ -1,0 +1,21 @@
+﻿@page "/UpdateExercise/{Id:int}"
+<h3>Update Exercise</h3>
+<FormExercise Peticion="peticion" TextButton="Update Exercises" OnValidSubmit="Update"></FormExercise>
+@code {
+    [Parameter] public int Id { get; set; }
+    Peticion peticion { get; set; } = new();
+
+    protected override async Task OnParametersSetAsync()
+    {
+        await GetExercises();
+    }
+    async Task GetExercises()
+    {
+        peticion = await Http.GetFromJsonAsync<Peticion>($"https://localhost:44392/api/Peticion/{Id}");
+    }
+    async Task Update()
+    {
+        await Http.PutAsJsonAsync($"https://localhost:44392/api/Peticion/{Id}", peticion);
+        Navigation.NavigateTo("/Exercises");
+    }
+}

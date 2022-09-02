@@ -1,0 +1,14 @@
+﻿@page "/CreateExercise"
+<h3>Ejercicio</h3>
+<FormExercise Peticion="peticion" TextButton="Create Exercises" OnValidSubmit="Create"></FormExercise>
+
+@code {
+    Peticion peticion { get; set; } = new();
+
+    async Task Create()
+    {
+        peticion.Fecha_Request = DateTime.Now;
+        await Http.PostAsJsonAsync("https://localhost:44392/api/Peticion", peticion);
+        Navigation.NavigateTo("/Exercises");
+    }
+}

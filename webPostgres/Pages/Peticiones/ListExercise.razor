@@ -1,0 +1,66 @@
+﻿@page "/Exercises"
+<h3>List Exercises</h3>
+
+<div class="mb-3">
+    <a class="btn btn-success" href="CreateExercise">Create Exercise</a>
+</div>
+
+@if (exercises == null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (exercises.Length == 0)
+{
+    <text>Data not found</text>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Id</th>
+                <th>Request</th>
+                <th>Fecha Request</th>
+                <th>Response</th>
+                <th>Fecha Response</th>
+                <th>Username</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in exercises)
+            {
+                <tr>
+                    <td>
+                        <a class="btn btn-success" href="UpdateExercise/@item.Id">Edit</a>
+                        <button class="btn btn-danger" @onclick="() => DeleteAsync(item.Id)">Delete</button>
+                    </td>
+                    <td>@item.Id</td>
+                    <td>@item.Request</td>
+                    <td>@item.Fecha_Request</td>
+                    <td>@item.Response</td>
+                    <td>@item.Fecha_Response</td>
+                    <td>@item.Username</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    Peticion[] exercises { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetExercises();
+    }
+    async Task GetExercises()
+    {
+        exercises = await Http.GetFromJsonAsync<Peticion[]>("https://localhost:44392/api/Peticion");
+    }
+    async Task DeleteAsync(int Id)
+    {
+        await Http.DeleteAsync($"https://localhost:44392/api/Peticion/{Id}");
+        await GetExercises();
+    }
+}

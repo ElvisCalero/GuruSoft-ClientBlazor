@@ -1,0 +1,15 @@
+﻿<EditForm Model="Peticion" OnValidSubmit="OnValidSubmit">
+    <div class="form-field mb-3">
+        <label>Cadena de texto:</label>
+        <div><InputText @bind-Value="Peticion.Request"></InputText></div>
+        <label>Usuario:</label>
+        <div><InputText @bind-Value="Peticion.Username"></InputText></div>
+    </div>
+    <button type="submit" class="btn btn-success">TextButton</button>
+</EditForm>
+
+@code {
+    [Parameter] public Peticion Peticion { get; set; } = new();
+    [Parameter] public String TextButton { get; set; }
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+}
